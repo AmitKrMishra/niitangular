@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Without Angular with JQuery Demo-Powered by TKHTS.COM</title>
+
+</head>
+<!--Starting Point of Application-->
+<body >
+    
+    <div ng-app='myApp'>
+        
+       
+        <div ng-controller='firstController'>
+          <input type=text placeholder="Enter title" ng-model="title"/>
+         <input type=text placeholder="Enter title" ng-model="title"/>
+           {{title}}. {{fName}} {{lName}} <br>
+            
+            <button ng-click='getState()'>Show Result</button>
+            <div>{{result}}</div>
+        </div>
+        
+    
+         <div ng-controller='secondController'>
+            {{title}}. {{fName}} {{lName}}
+         </div>
+            
+
+    
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script> 
+    <script>
+     var app = angular.module('myApp',[])
+  
+     app.controller('firstController', function($scope){
+         $scope.fName = 'Puneet'
+         $scope.getState = function(){
+            
+             $scope.result = 'Welcome' + $scope.fName
+             
+         }
+         
+         console.log($scope)
+    
+     })
+     app.controller('secondController', function($scope){
+         $scope.lName = 'Vashisht'
+         console.log($scope)
+    
+     })
+    
+    </script>
+    
+    
+</body>
+</html>

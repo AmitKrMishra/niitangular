@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Without Angular with JQuery Demo-Powered by TKHTS.COM</title>
+
+</head>
+<!--Starting Point of Application-->
+<body >
+    
+    <div ng-app='calcApp'>
+
+         <div ng-controller='firstCtrl'>
+           <input type=text ng-model='data.message'/>
+         </div>
+        
+        <div ng-controller='secondCtrl'>
+           <input type=text ng-model='data.message'/>
+         </div>
+            
+
+    </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script> 
+    <script>
+     var app = angular.module('calcApp',[])
+     
+     app.factory('CommonData', function(){
+         return {
+             message : 'Common Message'
+         }
+         
+     })
+  
+     app.controller('firstCtrl', function($scope, CommonData){
+         
+         $scope.data = CommonData
+        
+     })
+     app.controller('secondCtrl', function($scope, CommonData){
+       $scope.data = CommonData
+     })
+    
+    </script>
+    
+    
+</body>
+</html>

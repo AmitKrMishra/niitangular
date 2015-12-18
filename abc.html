@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Without Angular with JQuery Demo-Powered by TKHTS.COM</title>
+    <!--Include AngularJs Script-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    
+</head>
+<!--Starting Point of Application-->
+<body ng-app>
+<label>Name:</label>
+<!--Binding-->
+<input type="text" ng-model="welcome" placeholder="Type Name Here" maxlength="20" autocomplete="off">
+<br>
+</body>
+<!--Expression-->
+<div id="displayNameDiv" class="box">Welcome {{welcome}}</div>
+</body>
+</html>
